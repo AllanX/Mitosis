@@ -19,7 +19,7 @@ function draw() {
 	textSize(21);
 	fill(100, 200, 100);
 	text("cell count " + cells.length, 10, 20);
-	text("left click = produce, right-click = kill", 10, height - 20);
+	text("left click = produce/split, right-click = kill", 10, height - 20);
 	
 	for (var i = cells.length - 1; i >= 0; i--) {
 		cells[i].move();

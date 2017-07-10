@@ -16,16 +16,15 @@ function Cell(pos, r, c) {
 		var vel = p5.Vector.random2D();
 		this.pos.add(vel);
 		this.lifeSpan++;
-	}
+	};
 	
 	this.clicked = function(x, y) {
 		return dist(this.pos.x, this.pos.y, x, y) < this.r/2;
-	}
+	};
 	
 	this.mitosis = function() {
-		var cell = new Cell(createVector(this.pos.x + random(-this.r/4,this.r/4), this.pos.y + random(-this.r/4,this.r/4)), this.r/1.4, this.c);
-		return cell;
-	}
+		return new Cell(createVector(this.pos.x + random(-this.r/4,this.r/4), this.pos.y + random(-this.r/4,this.r/4)), this.r/1.4, this.c);
+	};
 	
 	this.show = function() {
 		stroke(color(red(this.c), green(this.c), blue(this.c), 144));
